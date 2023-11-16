@@ -1,0 +1,142 @@
+a {
+  font-size: 5vmin;
+  font-weight: 300;
+  transition: font-weight 250ms ease-in-out;
+}
+
+a:hover {
+  font-weight: 900;
+}
+
+h1,
+p,
+footer {
+  font-family: "Darumadrop One", cursive;
+  justify-content: center;
+  text-align: center;
+}
+
+pre {
+  text-align: center;
+}
+
+/* imagen moviendose mientras se mueve todo*/
+
+.hero-banner {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  z-index: -1;
+}
+
+.hero-banner__title {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 700;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.hero-banner__title {
+  border-radius: 20px;
+  position: fixed;
+  transform: rotate(-15deg);
+  width: 450px;
+  height: 320px;
+}
+/* imagen moviendose mientras se mueve todo fin */
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  height: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  height: auto;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Darumadrop One", cursive;
+}
+
+.card-text {
+  font-size: 1%;
+  text-align: center;
+  font-family: FuenteCute;
+  visibility: hidden;
+}
+
+/*aparecer texto*/
+.card:hover .card-text {
+  visibility: visible;
+  width: 13ch;
+  border-right: 4px solid black;
+  margin: 2rem auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(13, end),
+    blink-caret 0.5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*aparecer texto final*/
+
+.img1 {
+  --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+  --m: left var(--_i, 0%) top var(--_g), bottom var(--_i, 0%) left var(--_g),
+    top var(--_i, 0%) right var(--_g), right var(--_i, 0%) bottom var(--_g);
+  -webkit-mask: var(--m);
+  mask: var(--m);
+  filter: grayscale();
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+img:hover {
+  --_i: 10%;
+  filter: grayscale(0);
+}
+
+.img2 {
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  width: 25%;
+  height: 25%;
+}
+
+.img3 {
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  width: 25%;
+  height: 30%;
+}
+
+.Noenemies {
+  color: #7c795d;
+  font-family: "Trocchi", serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
